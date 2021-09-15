@@ -26,9 +26,9 @@ rel="stylesheet">
   <div class='main-grid'>  
     <header class='logo-header'>
     <img class='logo-head' src='../../media/logo.jpg'>
-      <h2 class='company-name'>The Tree</h2>
+      <h2 class='company-name'>The Temp Plotters</h2>
       <a href='index.php'>
-      <img class='logo' src='../../media/Logo_Resized.png' alt='The Tree Company Logo'>
+      <img class='logo' src='../../media/Logo_Resized.png' alt='The Temp Plotters Company Logo'>
       </a>
     </header>
 
