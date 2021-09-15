@@ -1,0 +1,118 @@
+ public void loadFromFile()
+   {
+      String type;
+      Customer cust;
+      Stock stock;
+      // try/catch block is used here to ensure that the .txt file exists and can
+      // also be read from.
+      try
+      {
+         Scanner fileScanner = new Scanner(new FileReader("MTSaveFile.txt"));
+         // Separates the contents of the .txt file by comma's and new lines.
+         fileScanner.useDelimiter(",|\n");
+
+ 
+
+         // continues to read from the text file while there is still more data
+         // in the file (as in it stops once it reaches the end).
+         while (fileScanner.hasNext())
+         {
+            // Temporary Stock and Customer objects set to null in preparation
+            // of object creation from the text file.
+            stock = null;
+            cust = null;
+
+ 
+
+            type = fileScanner.next();
+
+ 
+
+            // Else If statement is used to determine the type of information
+            // contained in each line of the .txt file so that the correct
+            // object is created. It is then saved to the temporary object.
+            if (type.contentEquals("Backdrop"))
+            {
+               stock = new Backdrop(fileScanner);
+            }
+            else if (type.contentEquals("Costume"))
+            {
+               stock = new Costume(fileScanner);
+            }
+            else if (type.contentEquals("Prop"))
+            {
+               stock = new Prop(fileScanner);
+            }
+            else if (type.contentEquals("Customer"))
+            {
+               cust = new Customer(fileScanner);
+            }
+
+ 
+
+            // uses the newly created temporary object to create the object in the
+            // array and increment the relative stock/customer count.
+            if (stock != null)
+            {
+               this.stockCollection[this.numStockAdded] = stock;
+               this.numStockAdded++;
+            }
+            else if (cust != null)
+            {
+               this.customers[this.numCustomerAdded] = cust;
+               this.numCustomerAdded++;
+            }
+            else
+            {
+               System.out.println("Unable to load from file!");
+            }
+
+ 
+
+         }
+
+ 
+
+         // closes the file once everything is read.
+         fileScanner.close();
+      }
+      // prints an error message if the file could not be read from or can't
+      // be found.
+      catch (IOException e)
+      {
+         System.out.println("Error - unable to load from file!");
+      }
+   }
+
+ 
+
+   // Writes the data contained in each class to a .txt file.
+   public void writeToFile()
+   {
+      try
+      {
+         // Creates a new .txt file if it does not already exist.
+         PrintWriter pw = new PrintWriter(new FileWriter("MTSaveFile.txt"));
+         // Calls the writeToFile method of each stock class. Stock is
+         // written first as data contained in the Customer class requires
+         // the Stock Classes to be created. Writing the Stock Class first
+         // ensures that the Stock Classes are read first when reading from
+         // file.
+         for (int i = 0; i < this.numStockAdded; i++)
+         {
+            this.stockCollection[i].writeToFile(pw);
+         }
+         // Calls the writeToFile method for the Customer Class.
+         for (int i = 0; i < this.numCustomerAdded; i++)
+         {
+            this.customers[i].writeToFile(pw);
+         }
+         // Closes the file once finished being written to.
+         pw.close();
+      }
+      // Prints out an error message if the program can't write to the file.
+      catch (IOException e)
+      {
+         System.out.println("Error - could not write to file!");
+      }
+   }
