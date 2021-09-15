@@ -1,0 +1,115 @@
+/* Make HTML and body content viewable, layout to fill window */
+html,
+body {
+  padding: 15px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Archivo", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Belleza", "Bell MT", cursive;
+}
+
+:root {
+  --clr-green-text: #004b23;
+  --clr-green-background: #004b2348;
+  --clr-footer-background: #004b2311;
+  --clr-nav-background: #fffaf0;
+}
+
+/* Makes the html / webpage as tall or taller as the browser window */
+html {
+  min-height: 100vh;
+}
+
+/* Makes the body as tall or taller as the browser window, less html element's padding */
+body {
+  min-height: calc(100vh - 2 * 20px);
+}
+
+/* Give all semantic body elements uniform layout style */
+header,
+nav,
+main,
+footer,
+aside,
+section,
+article,
+details,
+div {
+  margin: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: var(--clr-nav-background);
+  border: 5px solid var(--clr-green-text);
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+article#about {
+  text-align: justify;
+}
+
+article#contact {
+  color: var(--clr-green-text);
+}
+
+h3#contact {
+  color: var(--clr-green-text);
+  text-align: center;
+}
+
+header {
+  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
+  margin: 0;
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  line-height: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header * {
+  vertical-align: middle;
+  filter: drop-shadow(-1px -1px 5px var(--clr-green-background));
+  -webkit-filter: drop-shadow(-1px -1px 5px var(--clr-green-background));
+  margin-right: 10px;
+}
+
+nav,
+footer {
+  padding: 10px;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0.2em;
+  display: inline-block;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0.2em;
+}
