@@ -16,5 +16,6 @@ topModule("The Temp Plotters");
 <p> dummy text </p>
 <p> dummy text </p>
 <p> dummy text </p>
+<p> Testing update across all redundancies<p>
 
 <?= footerModule() ?>
