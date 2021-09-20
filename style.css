@@ -49,7 +49,7 @@ div {
 }
 
 nav {
-  background-color: var(--clr-nav-background);
+  background-color: green;
   border: 5px solid var(--clr-green-text);
   display: flex;
   justify-content: space-around;
