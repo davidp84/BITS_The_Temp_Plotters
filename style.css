@@ -26,9 +26,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Give all semantic body elements uniform layout style */
-header, main, footer, aside, section, article, details, div {
+header, footer, aside, section, article, details, div {
   margin: 5px;
   box-sizing: border-box;
+}
+
+main {
+  margin: 100px;
 }
 
 /* styles for NAV element including for nav bar */
@@ -90,6 +94,11 @@ h3#contact {
   text-align: center;
 }
 
+article {
+  text-align: left;
+  padding: 10px;
+}
+
 header {
   font-size: clamp(3rem, 10vw, 7rem);
   font-weight: bold;
@@ -113,6 +122,11 @@ header * {
   margin-right: 10px;
 }
 
+img {
+  margin-right: 100px;
+}
+
 footer {
   padding: 10px;
+  margin-top: 500px;
 }
