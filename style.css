@@ -36,11 +36,7 @@ header, nav, main, footer, aside, section, article, details, div {
 nav {
   background-color: blue;
   border: 5px solid var(--clr-green-text);
-  justify-content: space-around;
   width: 100%;
-  top: 0;
-  z-index: 10;
-  margin-bottom: 0;
   padding: 10px;
 }
 
@@ -49,7 +45,6 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: rgb(212, 228, 188);
-  position: fixed;
   top: 100px;
   width: 95.7%;
   
