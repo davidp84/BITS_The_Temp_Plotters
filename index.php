@@ -5,29 +5,23 @@
 
 include ('tools.php');
 topModule("The Temp Plotters");
+    
 ?>
 
-<body>
-  <div class='main-grid'>  
-    <header class='logo-header'>
-    <img class='logo-head' src='../../media/logo.jpg'>
-      <h2 class='company-name'>The Temp Plotters</h2>
-      <a href='index.php'>
-      <img class='logo' src='../../media/Logo_Resized.png' alt='The Temp Plotters Company Logo'>
-      </a>
-    </header>
+<h1> ALERTS <h1>
 
-    <nav id="nav">
-      <div>
-        <ul>
-          <li><a href="index.php" id="home__link">Home</a></li>
-          <li><a href="about.php" class="nav_link">About</a></li>
-        </ul>
-      </div>
-    </nav>
 
-<main>
+<table class="main-table">
+  <tr>
+    <th class="table-header">Date</th>
+    <th class="table-header">Temperature</th>
+    <th class="table-header">Humidity</th>
+    <th class="table-header">Alert Sent</th>
+  </tr>
+    <?= tableModule() ?>
+</table>
 
+<<<<<<< HEAD
 <h1> DUMMY HEADING <h1>
 
 <p> dummy text </p>
@@ -40,3 +34,7 @@ topModule("The Temp Plotters");
 <p> Testing update across all redundancies.<p>
 
 <?= footerModule() ?>
+=======
+<?= footerModule() ?>
+<?= debugModule() ?>
+>>>>>>> 08bb349f578776fba31b833baec1c0d7c7cf2ddb

@@ -1,0 +1,5 @@
+id,date,temp,humidity,alerted
+1,28/09/2021 1:03PM,31,67,false
+2,28/09/2021 1:18PM,32,67,true
+3,28/09/2021 2:18PM,34,61,true
+4,28/09/2021 3:18PM,30.5,55,true
