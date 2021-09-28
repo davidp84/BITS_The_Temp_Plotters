@@ -2,6 +2,8 @@
   session_start();
   error_reporting( E_ERROR | E_WARNING | E_PARSE);
 
+  $alerts = getAlertsFromCSV();
+
   function topModule($title) {
   echo <<<"TOP"
 <head>
@@ -41,4 +43,44 @@ function footerModule() {
 
 </html>
 END;
+}
+
+// Builds array of alerts from CSV File
+function getAlertsFromCSV() {
+  $alerts=[];
+  if( ($fp = fopen('alerts.txt','r')) && flock($fp, LOCK_SH) ) {
+    if (($headings = fgetcsv($fp)) !== false) {
+      while ( $cells = fgetcsv($fp) ) {
+        $numCols = count($cells);
+        for ($c=1; $c<$numCols; $c++) {
+          $alerts[$cells[0]][$headings[$c]] = $cells[$c];
+        }
+        $date=explode('|', $alerts[$cells[0]]['date'] );
+        $temp=explode('|', $alerts[$cells[0]]['temp'] );
+        $humidity=explode('|', $alerts[$cells[0]]['humidity'] );
+        $alerted=explode('|', $alerts[$cells[0]]['alerted'] );
+      }
+    }
+    flock($fp, LOCK_UN);
+    fclose($fp);
+    return($alerts);
+  }
+}
+
+// Builds table rows from data collected from CSV file.
+function tableModule() {
+  foreach ($alerts as $alert => $range) {
+  $date = $range['date'];
+  $temp = $range['temp'];
+  $humidity = $range['humidity'];
+  $alerted = $range['alerted'];
+  echo <<<"TABLE"
+  <tr>
+    <td class="table-row">$date</td>
+    <td class="table-row">$temp</td>
+    <td class="table-row">$humidity</td>
+    <td class="table-row">$alerted</td>
+  </tr>
+TABLE
+}
 }
