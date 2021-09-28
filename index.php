@@ -5,6 +5,7 @@
 
 include ('tools.php');
 topModule("The Temp Plotters");
+    
 ?>
 
 <h1> ALERTS <h1>
@@ -21,3 +22,4 @@ topModule("The Temp Plotters");
 </table>
 
 <?= footerModule() ?>
+<?= debugModule() ?>

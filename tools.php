@@ -65,6 +65,13 @@ function footerModule() {
 END;
 }
 
+function debugModule() {
+  $alerts = getAlertsFromCSV();
+  echo "\n\n<pre id='debug'>";
+  print_r($alerts);
+  echo "</pre>\n\n";
+}
+
 // Builds array of alerts from CSV File
 function getAlertsFromCSV() {
   $alerts=[];
@@ -89,6 +96,7 @@ function getAlertsFromCSV() {
 
 // Builds table rows from data collected from CSV file.
 function tableModule() {
+  $alerts = getAlertsFromCSV();
   foreach ($alerts as $alert => $range) {
   $date = $range['date'];
   $temp = $range['temp'];
