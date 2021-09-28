@@ -34,7 +34,7 @@ header, nav, main, footer, aside, section, article, details, div {
 
 /* styles for NAV element including for nav bar */
 nav {
-  background-color: green;
+  background-color: blue;
   border: 5px solid var(--clr-green-text);
   display: flex;
   justify-content: space-around;
