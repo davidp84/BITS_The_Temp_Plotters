@@ -1,18 +1,20 @@
 /* Make HTML and body content viewable, layout to fill window */
-html,
+/* Makes the html / webpage as tall or taller as the browser window */
+html {
+  min-height: 100vh;
+}
+
+/* Makes the body as tall or taller as the browser window, less html element's padding */
 body {
+  min-height: calc(100vh - 2 * 20px);
   padding: 15px;
   margin: 0px;
   box-sizing: border-box;
   font-family: "Archivo", sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Sets font family for all Header styles */ 
+h1, h2, h3, h4, h5, h6 {
   font-family: "Belleza", "Bell MT", cursive;
 }
 
@@ -23,31 +25,14 @@ h6 {
   --clr-nav-background: #fffaf0;
 }
 
-/* Makes the html / webpage as tall or taller as the browser window */
-html {
-  min-height: 100vh;
-}
-
-/* Makes the body as tall or taller as the browser window, less html element's padding */
-body {
-  min-height: calc(100vh - 2 * 20px);
-}
-
 /* Give all semantic body elements uniform layout style */
-header,
-nav,
-main,
-footer,
-aside,
-section,
-article,
-details,
-div {
+header, nav, main, footer, aside, section, article, details, div {
   margin: 5px;
   padding: 5px;
   box-sizing: border-box;
 }
 
+/* styles for NAV element including for nav bar */
 nav {
   background-color: green;
   border: 5px solid var(--clr-green-text);
@@ -58,8 +43,56 @@ nav {
   top: 0;
   z-index: 10;
   margin-bottom: 0;
-  padding-bottom: 0;
+  padding: 10px;
 }
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(212, 228, 188);
+  position: fixed;
+  top: 100px;
+  width: 95.7%;
+  
+}
+
+li {
+  float: left;
+  border-color: rgba(212, 228, 188);
+  border-width: 5px;
+}
+
+li a {
+  display: block;
+  color: rgb(9, 53, 87);
+  text-align: center;
+  padding: 15px 40px;
+  text-decoration: none;
+  border-radius: 0 0 10px 10px;
+  border-color: rgba(212, 228, 188);
+  border-width: 5px;
+}
+
+li a:hover:not(.active) {
+  background-color: rgb(150, 172, 183);
+}
+
+.active {
+  background-color: rgb(150, 172, 183);
+}
+/* 
+nav ul {
+  padding: 0;
+  margin: 0.2em;
+  display: inline-block;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0.2em;
+} */
 
 article#about {
   text-align: justify;
@@ -97,19 +130,6 @@ header * {
   margin-right: 10px;
 }
 
-nav,
 footer {
   padding: 10px;
-}
-
-nav ul {
-  padding: 0;
-  margin: 0.2em;
-  display: inline-block;
-  list-style: none;
-}
-
-nav ul li {
-  display: inline-block;
-  padding: 0.2em;
 }

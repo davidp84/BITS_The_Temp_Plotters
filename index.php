@@ -9,6 +9,7 @@ topModule("The Temp Plotters");
 
 <h1> ALERTS <h1>
 
+
 <table class="main-table">
   <tr>
     <th class="table-header">Date</th>
