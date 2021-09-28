@@ -81,6 +81,6 @@ function tableModule() {
     <td class="table-row">$humidity</td>
     <td class="table-row">$alerted</td>
   </tr>
-TABLE
+TABLE;
 }
 }
