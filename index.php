@@ -8,6 +8,18 @@ topModule("The Temp Plotters");
     
 ?>
 
+
+<nav id="nav">
+  <div>
+    <ul>
+      <li><a href="index.php" id="home__link">Home</a></li>
+      <li><a href="about.php" class="nav_link">About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
 <h1> ALERTS <h1>
 
 
