@@ -24,22 +24,11 @@
 rel="stylesheet">
 </head>
 
-<body>
-<div class='main-grid'>  
-<header class='logo-header'>
-<img class='logo-head' src='../../media/logo.jpg'>
-  <h2 class='company-name'>The Temp Plotters</h2>
-  <a href='index.php'>
-  <img class='logo' src='../../media/Logo_Resized.png' alt='The Temp Plotters Logo'>
-  </a>
-</header>
-
 TOP;
 }
 
 function footerModule() {
   echo <<<"END"
-</main>
 
 <footer>
   <div id='footer-contact'>
