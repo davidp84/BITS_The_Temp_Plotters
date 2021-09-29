@@ -34,10 +34,10 @@ topModule("The Temp Plotters");
 
 <article> 
 
-<table class="main-table">
+<table  class="main-table" style="width:70%">
   <tr>
     <th class="table-header">Date</th>
-    <th class="table-header">Temperature</th>
+    <th class="table-header" >Temperature</th>
     <th class="table-header">Humidity</th>
     <th class="table-header">Alert Sent</th>
   </tr>

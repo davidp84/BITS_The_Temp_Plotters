@@ -130,3 +130,22 @@ footer {
   padding: 10px;
   margin-top: 500px;
 }
+
+.main-table, .table-header, .table-row {
+  border: 1px solid rgb(54, 54, 54);
+  border-collapse: collapse;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* for colouring the table background */
+.table-row  {
+  background-color: rgb(228, 227, 227);
+  font-weight: normal;
+}
+
+.table-header {
+  background-color: rgb(168, 168, 168);
+  height: 50px;
+  font-weight: bold;
+}
