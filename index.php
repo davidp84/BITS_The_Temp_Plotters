@@ -12,7 +12,7 @@ topModule("The Temp Plotters");
 <body>
 <div class='main-grid'>  
 <header class='logo-header'>
-<img class='logo-head' src='../../media/logo.jpg'>
+<!-- <img class='logo-head' src='../../media/logo.jpg'> -->
   <h2 class='company-name'>The Temp Plotters</h2>
   <a href='index.php'>
   <img class='logo' src='https://i.pinimg.com/564x/74/94/ed/7494ed64686f16ed0535873c1c2790e1.jpg' alt='The Temp Plotters Logo' width="750" height="350">

@@ -10,12 +10,12 @@ body {
   margin-left: 20px;
   margin-right: 20px;
   box-sizing: border-box;
-  font-family: "Archivo", sans-serif;
+  font-family: 'Trebuchet MS', sans-serif;
 }
 
 /* Sets font family for all Header styles */ 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Belleza", "Bell MT", cursive;
+  font-family: 'Trebuchet MS', sans-serif;
 }
 
 :root {
@@ -26,7 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Give all semantic body elements uniform layout style */
-header, footer, aside, section, article, details, div {
+footer, aside, section, article, details, div {
   margin: 5px;
   box-sizing: border-box;
 }
@@ -103,14 +103,6 @@ header {
   font-size: clamp(3rem, 10vw, 7rem);
   font-weight: bold;
   display: flex;
-  flex-wrap: wrap;
-  overflow-wrap: break-word;
-  margin: 0;
-  padding-top: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  line-height: 0;
   align-items: center;
   justify-content: space-between;
 }
@@ -119,11 +111,12 @@ header * {
   vertical-align: middle;
   filter: drop-shadow(-1px -1px 5px var(--clr-grey-background));
   -webkit-filter: drop-shadow(-1px -1px 5px var(--clr-grey-background));
-  margin-right: 10px;
+  margin-left: 100px;
 }
 
 img {
   margin-right: 100px;
+  margin-top: 10px;
 }
 
 footer {
