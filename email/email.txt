@@ -1,0 +1,8 @@
+To: Pi Alert Sys Admin
+From: Raspberry Pi Alert System
+Subject: Email Test using MSMTP from File
+Hi,
+This is an email test from file.
+
+
+ -- end of file ---
