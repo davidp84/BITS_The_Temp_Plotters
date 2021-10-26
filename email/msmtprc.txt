@@ -9,8 +9,8 @@ account gmail
 host smtp.gmail.com
 port 587
 from raspberry pi
-user [account]@gmail.com
-password [password]
+user tempplotters@gmail.com
+password T3mpPl0tters!
 
 # Set a default account
 account default : gmail

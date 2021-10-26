@@ -1,5 +1,5 @@
 set sendmail="/usr/bin/msmtp"
 set use_from=yes
 set realname="Raspberry Pi"
-set from=[account]@gmail.com
+set from=tempplotters@gmail.com
 set envelope_from=yes
