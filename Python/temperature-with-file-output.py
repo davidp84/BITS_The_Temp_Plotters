@@ -31,7 +31,7 @@ try:
             print("Temperature: {0:0.1f}C humidity={1:0.1f}%".format(temperature, humidity),"on",today,"at",now.strftime('%H:%M:%S'))
         else:
             print("Sensor failure. Check wiring.");
-        time.sleep(3);
+        time.sleep(2);
 
     # this will output to csv and I've put a print statement as a sanity check
     print("CSV file output")
@@ -48,7 +48,7 @@ try:
                 writer.writerow([temperature,humidity,today,now.strftime('%H:%M:%S')])
             else:
                 writer.writerow([temperature,humidity,today,now.strftime('%H:%M:%S')])
-        time.sleep(3);
+        time.sleep(2);
 
     # this will output to text and I've put a print statement as a sanity check
     print("Text file output")
@@ -58,17 +58,19 @@ try:
         today = date.today()
         now = datetime.datetime.now().time()
 
-        with open('sensor.txt', 'a') as file:
+        with open('sensor.txt', 'a', newline='') as file:
             if os.stat('sensor.txt').st_size == 0:
-                headings = ['Temperature','Humidity','Date','Time']
-                values = [str(temperature),str(humidity)]#,today,now.strftime('%H:%M:%S')]
-                file.write("".join(headings))
-                file.write("".join(values))
+                headings = ['Temperature',",",'Humidity',",",'Date',",",'Time','\n']
+                values = [str(temperature),",",str(humidity),",",str(today),",",str(now.strftime('%H:%M:%S')),"\n"]
+                for heading in headings:
+                    file.write(heading)
+                for value in values:
+                    file.write(value)
             else:
-                values = [str(temperature),str(humidity)]#,today,now.strftime('%H:%M:%S')]
-                file.write(values)
-        time.sleep(3);
-
+                values = [str(temperature),",",str(humidity),",",str(today),",",str(now.strftime('%H:%M:%S')),"\n"]
+                for value in values:
+                    file.write(value)
+        time.sleep(2);
     file.close()
 
 except RuntimeError:
