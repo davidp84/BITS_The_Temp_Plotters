@@ -61,10 +61,10 @@ function getAlertsFromCSV() {
         for ($c=1; $c<$numCols; $c++) {
           $alerts[$cells[0]][$headings[$c]] = $cells[$c];
         }
-        $date=explode('|', $alerts[$cells[0]]['date'] );
-        $temp=explode('|', $alerts[$cells[0]]['temp'] );
-        $humidity=explode('|', $alerts[$cells[0]]['humidity'] );
-        $alerted=explode('|', $alerts[$cells[0]]['alerted'] );
+        $temp=explode('|', $alerts[$cells[0]]['Temperature'] );
+        $humidity=explode('|', $alerts[$cells[0]]['Humidity'] );
+        $date=explode('|', $alerts[$cells[0]]['Date'] );
+        $time=explode('|', $alerts[$cells[0]]['Time'] );
       }
     }
     flock($fp, LOCK_UN);
@@ -77,16 +77,16 @@ function getAlertsFromCSV() {
 function tableModule() {
   $alerts = getAlertsFromCSV();
   foreach ($alerts as $alert => $range) {
-  $date = $range['date'];
-  $temp = $range['temp'];
-  $humidity = $range['humidity'];
-  $alerted = $range['alerted'];
+  $date = $range['Date'];
+  $time = $range['Time'];
+  $temp = $range['Temperature'];
+  $humidity = $range['Humidity'];
   echo <<<"TABLE"
   <tr>
     <td class="table-row">$date</td>
+    <td class="table-row">$time</td>
     <td class="table-row">$temp</td>
     <td class="table-row">$humidity</td>
-    <td class="table-row">$alerted</td>
   </tr>
 TABLE;
 }

@@ -38,9 +38,9 @@ topModule("The Temp Plotters");
 <table  class="main-table" style="width:70%">
   <tr>
     <th class="table-header">Date</th>
+    <th class="table-header">Time</th>
     <th class="table-header" >Temperature</th>
     <th class="table-header">Humidity</th>
-    <th class="table-header">Alert Sent</th>
   </tr>
     <?= tableModule() ?>
 </table>
