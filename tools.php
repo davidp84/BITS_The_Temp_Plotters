@@ -85,8 +85,8 @@ function tableModule() {
   <tr>
     <td class="table-row">$date</td>
     <td class="table-row">$time</td>
-    <td class="table-row">$temp</td>
-    <td class="table-row">$humidity</td>
+    <td class="table-row">$temp&degC</td>
+    <td class="table-row">$humidity%</td>
   </tr>
 TABLE;
 }
