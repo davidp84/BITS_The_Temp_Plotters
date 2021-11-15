@@ -34,7 +34,31 @@ topModule("The Temp Plotters");
 
 <article> 
 
-<h1>BEANS</h1>
+<h1>Team Members</h1>
+<p>Timothy Hall - s3851553</p>
+<p>John Rehill - s3828158</p>
+<p>David Pulvirenti - s3858853</p>
+<p>Jacob Hooper - s3903479</p>
+<p>Mitchell Abrahams - s3792975</p>
+
+<h1>The Motivation</h1>
+
+<p>The motivation for the Temp Plotters team was that everyone in 
+  the team wanted to develop, design, and produce a small IT project 
+  that implemented a microcomputer along with some form of sensor. 
+  Everyone already had some experience with coding; however, 
+  implementing something based around hardware was exciting and 
+  provided additional learning that could complement our existing 
+  coding experience. 
+
+  
+
+After initial discussion, the idea of making a HVAC control unit 
+utilising a Raspberry Pi and a temperature and a humidity sensor 
+would be a great starting point for the project. Through research 
+into the hardware, components, and discussion amongst each other 
+it was decided to expand this to include a website component to 
+round out the project and provide a user interface. </p>
 
 </artcile>
 
