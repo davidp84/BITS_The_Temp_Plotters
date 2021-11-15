@@ -44,12 +44,14 @@ function footerModule() {
 END;
 }
 
-function debugModule() {
-  $alerts = getAlertsFromCSV();
-  echo "\n\n<pre id='debug'>";
-  print_r($alerts);
-  echo "</pre>\n\n";
-}
+// Uncomment to include debug Module to 
+// display array at bottom of page
+// function debugModule() {
+//   $alerts = getAlertsFromCSV();
+//   echo "\n\n<pre id='debug'>";
+//   print_r($alerts);
+//   echo "</pre>\n\n";
+// }
 
 // Builds array of alerts from CSV File
 function getAlertsFromCSV() {
