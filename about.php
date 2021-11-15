@@ -50,9 +50,9 @@ topModule("The Temp Plotters");
   implementing something based around hardware was exciting and 
   provided additional learning that could complement our existing 
   coding experience. 
-
+  </p>
   
-
+<p>
 After initial discussion, the idea of making a HVAC control unit 
 utilising a Raspberry Pi and a temperature and a humidity sensor 
 would be a great starting point for the project. Through research 
