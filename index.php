@@ -50,4 +50,3 @@ topModule("The Temp Plotters");
 </main>
 
 <?= footerModule() ?>
-<?= debugModule() ?>
