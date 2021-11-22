@@ -45,7 +45,7 @@ topModule("The Temp Plotters");
     <?= tableModule() ?>
 </table>
 
-</artcile>
+</article>
 
 </main>
 
